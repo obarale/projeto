@@ -32,13 +32,14 @@ body * {
 }
 body {
   background: var(--background-image) no-repeat center/cover;
+  height: 100vh;
 }
 
 .container0 {
   width: 100%;
   max-width: 360px;
-  height: 712px;
-  margin: 56px auto 0px;
+  height: 660px;
+  margin: 0px auto 0px;
 }
 
 .profile {
@@ -75,8 +76,8 @@ body {
 }
 
 .modo_claro .switch button {
-right: 0;
-left: initial;
+  right: 0;
+  left: initial;
 }
 
 .switch span {
@@ -140,4 +141,14 @@ footer {
   text-align: center;
   font-size: 14px;
   padding-bottom: 24px;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --background-image: url(./assets/assets/bg-desktop.jpg);
+  }
+
+  .modo_claro {
+    --background-image: url(./assets/assets/bg-desktop-light.jpg);
+  }
 }
