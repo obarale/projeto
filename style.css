@@ -73,11 +73,14 @@ body {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  animation: slide-back 0.5s forwards;
 }
 
+.switch button:hover {
+  outline:8px solid var(--border-color);
+}
 .modo_claro .switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.5s forwards;
 }
 
 .switch span {
@@ -150,5 +153,23 @@ footer {
 
   .modo_claro {
     --background-image: url(./assets/assets/bg-desktop-light.jpg);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
